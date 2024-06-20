@@ -1,0 +1,5 @@
+{
+  "extends": "./jsconfig-paths.json",
+  "include": ["src/**/*", "dist/**/*"],
+  "exclude": ["node_modules/**/*"]
+}
