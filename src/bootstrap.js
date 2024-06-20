@@ -1,4 +1,5 @@
 import { createServer } from 'node:http';
+import MongoDatabaseDriver from '@modules/drivers/MongoDatabaseDriver';
 
 import { app } from './app';
 
@@ -17,5 +18,7 @@ function createApplication() {
 }
 
 export default async function bootstrap() {
+	await MongoDatabaseDriver.connect();
+
 	await createApplication();
 }
