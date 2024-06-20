@@ -6,6 +6,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import hpp from 'hpp';
 
+import { routes } from './routes';
+
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
@@ -17,5 +19,7 @@ app.use(cors());
 app.use(hpp());
 
 app.use(morgan('dev'));
+
+app.use(routes);
 
 export { app };

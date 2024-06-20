@@ -1,0 +1,17 @@
+### MAGIC LINK
+POST http://localhost:3333/api/users/magic-link HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "testing@gmail.com"
+}
+
+### MAGIC LINK (VERIFY)
+POST http://localhost:3333/api/users/verify/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklkIjoiNjY3NDgxNGE4NTIwNmI0OWFmNmFiYzgwIiwiaWF0IjoxNzE4OTExMzA3LCJleHAiOjE3MTg5MTQ5MDd9.HdggxozX6A-_ExVP6_v2IyUre-hBQBH2dwnh4kbKjKk HTTP/1.1
+Content-Type: application/json
+
+
+### ME (AUTH)
+GET http://localhost:3333/api/users/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc0M2RmOTJkOGQ5YzI2NzIyYjlmNWYiLCJpYXQiOjE3MTg5MTEzNTYsImV4cCI6MTcxODk5Nzc1Nn0.S70w3Nbk9BQZd2w0-jsx7n1xhFtH2pMSBSeVbjdz_Dg
+Content-Type: application/json
